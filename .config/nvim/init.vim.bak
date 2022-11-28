@@ -1,0 +1,24 @@
+set nocompatible
+set ignorecase
+set autoindent
+set tabstop=4
+set softtabstop=4
+set expandtab
+set shiftwidth=4
+set cc=80
+filetype plugin indent on
+set mouse=a
+set mouse=v
+set cursorline
+
+
+syntax on
+set spell
+set number
+set noswapfile
+set hlsearch
+set incsearch
+
+set ttyfast
+
+let mapleader = "'"

@@ -1,0 +1,55 @@
+# Aliases
+alias vizsh="vi ~/.zshrc"
+alias szsh="source ~/.zshrc"
+alias vial="vi ~/.aliases"
+alias brewup="brew update && brew upgrade && brew cleanup"
+
+alias ls=lsd
+alias vi="nvim"
+alias vim="nvim"
+alias ls="lsd"
+alias cd="z"
+
+alias bi="brew install"
+alias bc="brew install --cask"
+
+alias doc="cd ~/Documents"
+alias dow="cd ~/Downloads"
+alias dri="cd ~/Google\ Drive/My\ Drive/"
+
+alias ...="../.."
+alias ....="../../.."
+
+alias -s pdf="zat"
+zat() {
+  zathura $1 > /dev/null 2>&1 &
+}
+
+jasdecrypt() {
+    /Users/mayurf/c/tools/jasypt-1.9.3/bin/decrypt.sh password=$1 input=$2
+}
+
+jasencrypt() {
+    /Users/mayurf/c/tools/jasypt-1.9.3/bin/encrypt.sh password=$1 input=$2
+}
+
+alias rm="nocorrect grm -i"
+
+## Git
+alias gc="git commit"
+alias ga="git add"
+alias gs="git status"
+alias gb="git branch"
+alias gcl="git clone"
+alias gp="git push"
+alias gpo="git push origin"
+alias gco="git checkout"
+alias gcm="git checkout master"
+alias gcb="git checkout -b"
+alias gl="git logline"
+
+## Gradle
+alias grb="./gradlew clean build testAll sonar -PsonarAnalysisMode=publish"
+alias grun="./gradlew bootRun"
+alias grt="./gradlew test"
+
