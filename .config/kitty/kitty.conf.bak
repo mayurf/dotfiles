@@ -2166,9 +2166,3 @@ shell_integration no-cursor
 #: 
 
 #: 
-
-
-# BEGIN_KITTY_THEME
-# Tokyo Night
-include current-theme.conf
-# END_KITTY_THEME
