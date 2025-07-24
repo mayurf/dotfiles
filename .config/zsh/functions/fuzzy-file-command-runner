@@ -1,0 +1,2 @@
+cat $2 | fzf --print0 < /dev/tty | xargs -0 -o $1
+

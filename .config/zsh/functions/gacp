@@ -1,0 +1,13 @@
+local dir="${1:-.}"
+
+# Check if directory exists and is a git repo
+if [ -d "$dir" ] && git -C "$dir" rev-parse --show-toplevel > /dev/null 2>&1; then
+  echo "$1 is a directory and the root of a git repository"
+else
+  echo "$1 is not a git repo root directory"
+  return 1;
+fi
+
+# git add commit and push
+git -C "$dir" add . && git -C "$dir" commit -m "sync from work mac $(date)" && git -C "$dir" push origin
+
