@@ -13,3 +13,9 @@
 [submodule ".config/zsh/plugins/zsh-smartcache"]
 	path = .config/zsh/plugins/zsh-smartcache
 	url = https://github.com/QuarticCat/zsh-smartcache.git
+[submodule ".config/lazyvim"]
+	path = .config/lazyvim
+	url = git@github.com:mayurf/lazyvim.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:mayurf/lazyvim.git
