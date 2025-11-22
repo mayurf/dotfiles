@@ -19,8 +19,10 @@ alias doc="cd ~/Documents"
 alias dow="cd ~/Downloads"
 alias dri="cd ~/Google\ Drive/My\ Drive/"
 
+alias cd..="cd .."
 alias ...="../.."
 alias ....="../../.."
+alias .....="../../../.."
 
 alias rm="nocorrect grm -i"
 
