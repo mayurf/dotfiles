@@ -1,0 +1,16 @@
+echo "Regenerating zoxide config..."
+zoxide init zsh > $ZDOTDIR/zoxide_init.zsh
+
+echo "Regenerating atuin config..."
+atuin init zsh --disable-up-arrow > $ZDOTDIR/atuin_init.zsh
+
+echo "Regenerating mise config..."
+mise activate zsh --shims > $ZDOTDIR/mise_init.zsh
+
+echo "Regenerating wtp config..."
+wtp shell-init zsh > $ZDOTDIR/wtp_init.zsh
+
+echo "Regenerating starship config..."
+starship init zsh > $ZDOTDIR/starship_init.zsh
+
+echo "Done! Please restart your shell."

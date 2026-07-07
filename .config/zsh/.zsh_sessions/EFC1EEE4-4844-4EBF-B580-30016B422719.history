@@ -1,0 +1,1064 @@
+wtp remove --with-branch --force-branch -f chore/basic-cleanup
+wtp remove --with-branch --force-branch -f code_reviews
+wtp remove --with-branch --force-branch -f fix/frontend-to-bff-access-dev-env
+z .claude
+CLAUDE_DIR=$(pwd)
+wtp cd 001-bff-auth-passthrough-rebase-branch
+cp -R $CLAUDE_DIR .
+gs
+cat .claude/settings.
+git diff .claude/settings.json
+cyolo
+pnpm install
+pnpm approve-builds
+gs
+lg
+ll
+pnpm install
+claude "how is the redis config being done. Is it referencing the environment variables currently in the config"
+cyolo
+pnpm inwtall
+pnpm install
+gs
+cyolo -p "how to fast forward refactor/add-new-bff-server to this. Give me the command"
+wtp cs
+wtp cd
+wtp ls
+pnpm check
+pnpm tidy
+cyolo
+gs
+cyolo
+ls -lGa
+ops k8s login --cluster dev
+k config current-context
+cd deploy/base/server
+export BFF_IMAGE_TAG="8cd15481@sha256:56a972d08424e0629ad4863719513c200115a8c50793121dd7566465f9bb348e"
+export WEB_IMAGE_TAG="8cd15481@sha256:360681500056b492a428b33f0c068bc46a61a9e06846daafdf986256f9a25316"
+knova kustomize deploy/overlays/idin/dev | less
+....
+knova kustomize deploy/overlays/idin/dev | less
+knova apply -k deploy/overlays/idin/dev
+knova apply -k deploy/overlays/idin/dev
+knova rollout status deploy/nova-server-idin
+knova get pods
+ga
+gs
+cyolo -p "perform the vault secret fetch for BFF as mentioned in the justfile,and just write the json to a file. Modify the file to add entries for all the config params added in the new bff server"
+cyolo -p "create a justfile recipe for creating bff encryption keys that calls the script and sets it up so that the keys are created in the root dir"
+just gen-bff-keys
+brew install openssl
+openssl ecparam -list_curves
+just gen-bff-keys
+wtp cs
+wtp cd
+git checkout refactor/add-new-bff-server
+gs
+just gen-bff-keys
+openssl genpkey -algorithm ED25519
+zsh
+source $(mise activate zsh)
+exec $(mise activate zsh)
+cd. .mise
+ll
+cd .mise
+ll
+cd config.toml
+cat config.toml
+knova
+cd ..
+zed .mise
+mise reshim
+mise exec --python mkdocs server
+mise exec mkdocs server
+mise exec -- mkdocs serve\
+
+mise exec -- mkdocs serve\
+
+mise exec -- mkdocs serve --livereload
+gs
+git branch -u origin/refactor/remove-previous-bff-implementation removal-branch
+wtp add -b devex/add-devex-stuff
+cyolo
+gs
+pnpm compile
+docker build -t nova-combined-server -f apps/server/Dockerfile .
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+cat apps/server-nestjs/.env
+vi apps/server-nestjs/.env
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+vi apps/server-nestjs/.env
+vi apps/server-nestjs/.env
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+pnpm tidy
+pnpm test
+pnpm codegen
+pnpm compile
+pnpm check-types
+pnpm tidy
+pnpm check-types
+pnpm compile
+docker build -t nova-combined-server -f apps/server/Dockerfile .
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+just run-bff
+just
+just
+just list
+just ls
+just --help
+just --fmt
+just --fmt --unstable
+just -l
+just docker-run-bff\ 
+just docker-run-bff
+just docker-run-bff
+pnpm run dev
+pnpm run dev
+git stash
+git merge --ff-only 001-bff-auth-passthrough-rebase-branch
+pnpm run compile
+cyolo
+pnpm tidy
+pnpm check-types
+pnpm install
+pnpm tidy
+pnpm test
+pnpm test:e2e
+cd apps/server-nestjs
+pnpm test:e2e
+pnpm test:e2e
+...
+pnpm tidy
+pnpm tidy
+git fetch origin main:main && git rebase refs/remotes/origin/main --autostash && git push origin HEAD --no-verify --force-with-lease
+cyolo
+pnpm install
+cd apps/server
+pnpm test
+pnpm run test
+pnpm run test:e2e
+pnpm test
+wtp cd
+gs
+git fetch origin main:main && git rebase refs/remotes/origin/main --autostash && git push origin HEAD --no-verify --force-with-lease
+cyolo
+cat apps/server-nestjs/.env
+pwd
+ll
+cd apps
+ll
+cd ..
+pnpm install
+just hydrate-bff-env
+export VAULT_ADDR=https://vault.svc.idine.com
+just hydrate-bff-env
+cat apps/server/.env
+cyolo
+pnpm tidy
+cyolo -p "fix pnpm lint errors, run tests and e2e tests and ensure everything passes"
+cyolo --resume e3f6a681-05a8-4481-8d3d-96e08827cefd
+wtp add -b 005-bff-correlation-id-implementation
+wtp cd
+wtp add -b 004-bff-idempotency-key-implementation
+wtp ls
+cyolo
+wtp ls
+wtp @
+wtp cd
+cat apps/server/.env
+cyolo "look at @apps/server/.env particularly the public and private keys. They appear in multiple lines. Will this work. COrrect it and also fix the justfile job that generates it"
+cyolo -c
+cat apps/server/.env |pb
+cyolo
+pnpm tidy
+cyolo
+pnpm tidy
+pnpm test
+pnpm install
+pnpm test
+cyolo
+git fetch
+grm
+cyolo -c
+zsh
+wtpcd
+wtp cd
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+pnpm compile && docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+pnpm compile
+docker build -t nova-combined-server -f apps/server/Dockerfile .
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+cyolo
+pnpm compile
+pnpm install
+pnpm compile
+docker build -t nova-combined-server -f apps/server/Dockerfile .
+cyolo
+s
+gs
+claude
+gs
+ll
+gs
+git switch -c refactor/remove-previous-bff-implementation
+wtp add refactor/remove-previous-bff-implementation
+git checkout refactor/add-new-bff-server
+wtp add refactor/remove-previous-bff-implementation
+wtp cd refactor/remove-previous-bff-implementation
+cyolo
+wtp @
+wtp cd
+wtp ls
+wtp remove --with-branch --force-branch -f removal-branch
+wtp ls
+wtp cd 004-bff-idempotency-key-implementation
+wtp cd 005-bff-correlation-id-implementation
+cyolo
+git log
+idea .
+pnpm install
+zsh
+wtp cd 004-bff-idempotency-key-implementation
+cyolo
+wtp cd
+cat /tmp/mayur_notes/pr-description.md|pb
+z nova
+pwd
+z w
+ll
+mkdir zzarchive
+mv big-rewrite zzarchive
+ll
+cd zzarchive
+ll
+cd ..
+ll
+rip mock-configurator/
+cd payments
+ll
+cd ..
+rip payment
+ll
+rip payments
+ll
+mkdir specswarm
+cd specswarm
+git clone git@gitlab.idine.com:applications/nova.git
+cd nova
+cyolo
+cyolo
+ll
+cd qa
+ll
+cd perf-tests
+ll
+cd lib
+ll
+cd ..
+ll
+cd docs
+ll
+zed .
+bew install k6
+brew install k6
+pwd
+pnpm install
+cd ..
+node runner.js
+cp envs/.env.local.example envs/.env.local
+node runner.js
+ll
+cd envs
+ll
+cat .env.local
+cd ..
+ll
+cd scripts
+ll
+cd ..
+subl runner.js
+node runner.js
+subl .
+node runner.js
+http https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa
+http 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa'
+http help
+http -h
+http --help
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq '.encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq 'plainTextCardNumber .encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq '.plainTextCardNumber .encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq '.plainTextCardNumber \n.encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq -r '.plainTextCardNumber, .encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq -r '.plainTextCardNumber, .encryptedCardNumber_RSA_Sha1'
+pnpm install -g @augmentcode/auggie
+z $ZDOTDIR
+auggie
+exec zsh
+k -n partner-sites rollout status deploy/nova-server-idin
+k -n partner-sites get pods
+k -n partner-sites  rollout restart deployment nova-server-idin
+k -n partner-sites rollout status deploy/nova-server-idin
+k -n partner-sites get deployments
+k -n partner-sites rollout undo deployment/nova-server-idin
+k -n partner-sites rollout undo deployment/nova-web-idin
+export BFF_IMAGE_TAG="8cd15481"
+export WEB_IMAGE_TAG="8cd15481"
+export BFF_IMAGE_TAG="8cd15481"
+export OVERLAY=deploy/overlays/idin/dev
+kubectl kustomize "$OVERLAY" 
+kubectl apply -k "$OVERLAY"
+k -n partner-sites rollout status deploy/nova-server-idin
+k -n partner-sites get pods
+k -n partner-sites rollout undo deployment/nova-server-idin
+k -n partner-sites rollout undo deployment/nova-web-idin
+k -n partner-sites get pods
+k -n partner-sites get pods
+k -n partner-sites get pods
+k -n partner-sites rollout undo deployment/nova-server-idin
+k -n partner-sites get pods
+kubectl apply -k "$OVERLAY"
+k -n partner-sites get pods
+k -n partner-sites get pods
+k -n partner-sites  rollout restart deployment nova-server-idin
+cyolo
+zsh
+cd apps/server-nestjs
+cat .env
+pwd
+/Users/mayurf/w/specswarm/nova/apps/server-nestjs
+just -l
+just hydrate-env="stg"
+just hydrate-bff-env="stg"
+cat ../../justfile
+just hydrate-bff-env
+cat .env
+export VAULT_ADDR=https://vault.svc.idine.com
+cat .env
+pnpm run dev
+cat .env
+cd apps/server
+cat .env
+/Users/mayurf/w/specswarm/nova/apps/server
+cat .env
+ll
+cat .env
+export VAULT_ADDR=https://vault.svc.idine.com
+just hydrate-bff-env
+cat .env
+just hydrate-bff-env
+cat .env
+pnpm run dev
+gpra
+claude
+claude help
+claude -h
+cyolo -r
+ll
+cd ..
+ll
+git clone https://gitlab.idine.com/applications/offer-assignment
+git clone git@gitlab.idine.com:applications/offer-assignment.git
+cd nova
+gpra
+wtp ls
+wtp cd 005-bff-correlation-id-implementation
+git rebase refs/remotes/origin/main --autostash
+z w
+cd offer-assignment
+agy .
+bunx --bun @scalar/cli reference target/offer-assignment.yaml --watch\
+
+bunx --bun @scalar/cli target/offer-assignment.yaml --watch\
+
+cd $ZDOTDIR
+cd functions
+ll
+alias
+vial
+exec zsh
+cd w
+cd .zsh
+cat aliases
+cd ..
+cat .mise/config.toml
+cd nova
+gs
+git checkout main
+ll
+gs
+rm -rf apps/server/coverage/
+rm -rf apps/server/coverage
+vial
+pnpm install
+pnpm lint:fix
+turbo run lint
+pnpm lint:check
+pnpm tidy
+pnpm test
+pnpm test:e2e
+pnpm test:e2e --filter apps/server
+pnpm --filter "@apps/server" run test:e2e
+pnpm --filter "apps/server" run test:e2e
+pnpm --filter "./apps/server" run test:e2e
+git fetch origin main:main && git rebase refs/remotes/origin/main --autostash && git push origin HEAD --no-verify --force-with-lease
+pnpm tidy
+gs
+pnpm toidy && pnpm test && pnpm --filter "./apps/server" run test:e2e
+pnpm tidy && pnpm test && pnpm --filter "./apps/server" run test:e2e
+pnpm install
+cd apps/server
+ll
+cat .env
+vi .env.example
+cp .env.example .env.local
+nest g library psbe-proxy
+pnpm install
+pnpm i -d @fastify/http-proxy
+pnpm i -d fastify-plugin
+pnpm i -d @fastify/fastify
+pnpm i -d fastify
+claude --dangerously-skip-permissions
+claude --sessions
+claude --help
+cd apps/server
+npm run dev
+ll
+cat .env
+npm run dev
+pnpm i -d ioredis
+z nova
+gs
+rm -rf apps/server/coverage
+gs
+rm -rf .superpowers/
+rm -rf  curl-pod/
+gpra
+git checkout -b deploy/nginx_configurations_for_auth
+ll
+mkdir local-dev
+cd local-dev
+touch .env.local
+touch docker-compose.yml
+cd ,,.
+cd ..
+cd _nginx
+ll
+cat overridden_docker_entrypoint.sh
+vi .
+subl .
+cd ..
+subl .
+ll
+cd apps/server
+ll
+cd libs
+ll
+cp -R bff-auth ~/w/bff-auth-overengineered-backup
+cp -R bff-graphql-auth ~/w/bff-graphql-auth-overengineered-backup
+subl ~/w/bff-auth-overengineered-backup
+subl ~/w/bff-graphql-auth-overengineered-backup
+..
+pnpm build
+pnpm compile
+npx tsc
+gs
+z w
+ll
+cat .mise/config.toml
+vi .zsh/aliases
+cd .mise
+cd ../.zsh
+ll
+vi envrc
+exec zsh
+echo $VAULT_ADDR
+ops k8s login --cluster dev
+vi aliases
+vi aliases
+exec zsh
+pnpm tidy
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+just stop-local-bff-proxy
+./scripts/startOrUpdateLocalBff.sh
+ll ./script/
+ll ./scripts/
+./scripts/stopLocalBff.sh
+z nova
+cd apps/server
+ll
+pnpm tsc --noEmit
+pnpm install
+cyolo
+...
+git checkout -b devex/local-dev-proxy
+cyolo
+pnpm tidy
+cd _nginx/local-dev
+ll
+ll
+z nov
+chmod +x scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+just run-local-bff-proxy
+pnpm install
+pnpm tidy
+pnpm test
+pnpm test
+pnpm test
+pnpm test
+pnpm test:e2e --filter apps/server
+pnpm test:e2e --filter apps/server
+pnpm --filter @repo/server test:e2e 
+pnpm --filter @repo/server test:e2e 
+pnpm test
+pnpm tidy
+pnpm tidy
+pnpm test
+pnpm compile
+pnpm build
+just run-local-bff-proxy
+just run-local-bff-proxy
+just run-local-bff-proxy
+cd apps/server
+pnpm run dev
+pnpm run dev
+pnpm run dev
+...
+pnpm tiday
+pnpm tidy
+cd apps/nosh-universal
+ll
+cat .env
+export EXPO_PUBLIC_BFF_ENDPOINT=http://localhost:8081/api
+pnpm run dev
+vi grmp
+ll $ZDOTDIR/functions
+grmp
+cat $ZDOTDIR/functions/grmp
+exec zsh
+...
+grmp
+wtp add -b feat/cche-module
+cyolo
+wtp add -b observability/add-prometheus-metric-instrumentation
+curl --location 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=dev&cardType=Visa' 2>/dev/null | jq 'to_entries | .[] | "\(.key): \(.value)"'
+curl --location 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=dev&cardType=Visa' 2>/dev/null | jq '.'
+z nova
+git checkout main
+gs
+gpra
+pnpm install
+pnpm run dev
+lsof -iTCP -sTCP:LISTEN -Pn
+ps kill 94959
+cyolo -p "kill the process listening at 4000 and 3001"
+pnpm run dev
+pnpm run dev
+export EXPO_PUBLIC_BFF_ENDPOINT=http://localhost:8081/api
+pnpm run dev
+pnpm run dev
+pnpm install
+gs
+ll
+cd apps
+ll
+cd local-dev-proxy
+ll
+cat .env.local
+pnpm install\ 
+pnpm install
+docker compose -f local-elk/docker-compose.local.yml up -d
+cd ..
+docker compose -f local-elk/docker-compose.local.yml up -d
+curl -s http://localhost:5601/api/status | fx
+ll
+fd applica*
+vi merchant-indexer-service/src/main/resources/application.conf
+cp local-elk/.env.local.example .env
+ll
+cat .env
+mv .env .env_my
+vault kv get -mount="kv" -format=json "kubernetes/mdv-stg/consumer/merchant-search-service" \\
+    | jq -r '.data.data | to_entries[] | "\(.key)=\(.value)"' \\
+    > .env_search
+cat .env_search
+vault kv get -mount="kv" -format=json "kubernetes/mdv-stg/consumer/merchant-indexer-service" \\
+    | jq -r '.data.data | to_entries[] | "\(.key)=\(.value)"' \\
+    > .env_indexer
+claude -p "I have started the indexer service. How do I initiate the indexing. othing seems to be happening. It says ready to service requests"
+curl -s -u admin:R3wards1 \\
+  'http://localhost:9005/admin/reindex?indexName=merchant'
+curl -s -u foo:foo \\
+  'http://localhost:9005/admin/reindex?indexName=merchant'
+curl -s http://localhost:9004/health 
+curl -s http://localhost:9004/health 
+curl -s http://localhost:9200/health 
+curl -s -u foo:foo \\
+  'http://localhost:9004/v2/merchants/suggest?q=pizza' | jq .
+bunx serve search-test-app
+bunx serve -p 3000 search-test-app/
+pnpx serve search-test-app
+pnpx serve search-test-app
+docker compose -f local-elk/docker-compose.local.yml up -d
+delta .env_indexer .env_search
+mv .env_indexer .env
+ll
+cd specs
+ll
+cd 001-merchant-search-suggestions
+ll
+cd checklists
+ll
+cat requirements
+cat requirements.md
+..
+ll
+cd quickstart.md
+cat quickstart.md
+vi .env
+...
+vi .env
+sbt "indexerService/run"
+sbt "searchService/run"
+sbt "searchService/run"
+sbt "searchService/run"
+sbt "searchService/run"
+knova get deployment
+knova  rollout restart deployment nova-server-idin
+knova  rollout restart deployment nova-web-idin
+knova get pod
+knova rollout undo deployment/nova-server-idin
+cd ../nova
+git checkout -b debug-deploy-16-apr
+cyolo
+cmux welcome
+z merch
+cd w
+cd merchant-search-services
+ll
+gpra
+ll
+cd local-elk
+ll
+ll
+glow QUICKSTART.md
+cat QUICKSTART.md
+ll
+fd
+cd ..
+fd
+fd | grep.conf
+fd | grep .conf
+zed .
+curl -s http://localhost:9200/merchants/_mapping \\
+  | jq '.[] .mappings.properties.suggest'
+curl -s 'http://localhost:9200/merchants/_search?size=1' \\
+  -H 'Content-Type: application/json' \\
+  -d '{"_source": ["name", "suggest"]}' \\
+  | jq '.hits.hits[0]._source'
+bunx serve search-test-app
+cyolo -c
+cyolo
+pwd
+...
+gpra
+cyolo
+ll
+vi apps/nosh-universal/.env
+npm install
+pnpm install
+npm run dev
+pnpm run dev
+pnpm run dev
+pnpm run dev
+http 'https://offerassignment.service.dev.idine.com/v1/offer-assignments?memberId=0'
+http 'https://offerassignment.service.stg.idine.com/v1/offer-assignments?memberId=0'
+http `http://localhost:8081/api/idin/csrf'\
+\
+
+http 'http://localhost:8081/api/idin/csrf'
+cyolo
+brew install --cask calyx
+pnpm install
+pnpm tidy
+pnpm lint:check
+grmp
+pnpm tidy
+pnpm test
+...
+pnpm tidy
+wtp add
+wtp add 006-bff-correlation-id
+git checkout main
+wtp add 006-bff-correlation-id
+cyolo
+idea .
+vial
+cd $ZDOTDIR
+ll
+cd functions
+ll
+cat gpra
+cat gpra > grm
+vi grm
+cat grm > grmp
+vi grmp
+..
+z w
+mkdocs serve --livereload
+mise exec -- mkdocs serve --livereload
+brew tap yuuichieguchi/calyx
+curl -s -u admin:R3wards1 \\
+  'http://localhost:9005/admin/reindex?indexName=merchant'
+curl -s -u foo:foo \\
+  'http://localhost:9005/admin/reindex?indexName=merchant'
+idea .
+xh POST localhost:9200/merchants/_search \\
+  size:=2 \\
+  query:='{"nested":{"path":"campaigns","query":{"term":{"campaigns.code":"IDT0"}}}}'\
+
+xh POST localhost:9200/merchants/_search \\
+  size:=2 \\
+  query:='{"nested":{"path":"campaigns","query":{"term":{"campaigns.code":"IDT0"}}}}'\
+| jless
+xh POST localhost:9200/merchants/_search \\
+  size:=2 \\
+  query:='{"nested":{"path":"campaigns","query":{"term":{"campaigns.code":"IDT0"}}}}'| jless
+sbt test
+sbt test
+sbt "indexerService/run"
+z search
+grmp
+idea .
+agy .
+auggie
+pnpm dev
+cat apps/server/src/psbe-proxy-plugin.ts
+auggie -r
+auggie --resume
+auggie -c
+pwd
+wtp cd
+pwd
+pnpx serve search-test-app
+brewup
+sync-brain
+z p
+~
+sync-brain
+lsof -iTCP -sTCP:LISTEN -Pn\ 
+lsof -iTCP -sTCP:LISTEN -Pn
+ops vault login --vault-cluster standard && ops k8s login --cluster dev --role=admin
+knova get pods
+z nova
+gpra
+gpra
+wtp add -b fix/auth-cookie-fix-to-unblock-local-dev
+auggie
+pnpm install
+cd apps/server
+pnpm install
+cat .env
+just hydrate-bff-env
+vi .env
+pnpm dev
+auggie
+pnpm run dev
+auggie -c
+cat .env
+wtp cd
+wtp remove --with-branch fix/auth-cookie-fix-to-unblock-local-dev
+wtp remove --with-branch -f fix/auth-cookie-fix-to-unblock-local-dev
+wtp add -b fix/auth-cookie-fix-to-unblock-local-dev
+wtp add fix/auth-cookie-fix-to-unblock-local-dev
+wtp cd fix/auth-cookie-fix-to-unblock-local-dev
+ll
+gs
+wetp cd
+wtp cd
+wtp remove --with-branch --force-branch -f fix/auth-cookie-fix-to-unblock-local-dev
+..
+cat merchant-search-services/aidocs/merchant-search-suggestions-code-review-scope-report.md|pb
+pnpm tidy
+pnpm test
+cd apps/server
+pnpm dev
+just hydrate-bff-env
+cat .env
+pnpm dev
+auggie -r
+pnpm install
+cd apps/server
+pnpm run dev
+pnpm run dev
+pnpm check-types
+...
+pnpm dev
+cyolo
+wtp add -b fix/auth-cookie-fix-to-unblock-local-dev
+idea .
+wtp ls
+wtp remove --with-branch --force-branch -f fix/auth-cookie-fix-to-unblock-local-dev
+pnpm tidy
+pnpm test
+pnpm install
+fd -I -t d '^node_modules$' -x rip {}
+pnpm install
+pnpm install
+pnpm tidy
+pnpm compile
+pnpm dev
+pnpm dev
+cyolo
+pnpm install
+pnpm copmpile
+pnpm compile
+cd apps/server
+npm bff-dev
+pnpm bff-dev
+cd ..
+..
+pnpm dev
+cyolo -p "Create a PR description for the changes here with instructions to frontend devs who work on @apps/nosh-universal on any changes they need to make to their local dev setup. Write the description to a PR.md"
+pnpm dev
+cyolo
+pnpm tidy
+pnpm test
+pnpm run dev
+cd .claude
+ll
+..
+git worktree remove -f /Users/mayurf/w/nova/.worktrees/exciting-tereshkova
+git worktree list
+git worktree prune
+git worktree list
+wtp remove --with-branch --force-branch -f fix/auth-cookie-fix-to-unblock-local-dev\
+
+gs
+vial
+exec zsh
+ll
+vi .env
+cat .env
+sbt "searchService/run"
+sbt "searchService/run"
+grmp
+cp ~/Downloads/CODE_REVIEW_REPORT.md .
+auggie
+l
+ll
+ga
+gs
+lg
+git switch -c search-suggestions-dev-tools-used-for-local-testing-and-specs
+lg
+lg
+git checkout NOP-000-merchant-search-suggestions-for-nova
+gpra
+grmp
+cd ~/p
+ll
+cd 15minstuff
+ll
+cd ..
+rm -rf 15minstuff
+cd my-containers
+ll
+cd ..
+rm -rf my-containers
+ll
+cd tools
+l
+ll
+cd play
+ll
+cat README.md
+cd ..
+ll
+cd ..
+ll
+rm -rf tools
+rm misetools.txt
+ll
+cd c
+ll
+cd agent-brain
+l;l
+ll
+cd ..
+cd ..
+ll
+cd c
+ll
+cd ..
+rm -rf c
+ll
+cd auth-apike
+ll
+cd ..
+rm -rf auth-apike
+ll
+cd ai
+ll
+cd ..
+rm -rf ai
+rm brew*
+ll
+mkdir gaandmein
+cd gaandmein
+touch bff-ways-of-working.excalidraw
+agy .
+cd ..
+mkdir .claude
+CLAUDE_CONFIG_DIR="/home/mayurf/p/.claude" claude --dangerously-skip-permissions
+pwd
+CLAUDE_CONFIG_DIR="/Users/mayurf/p/.claude" claude --dangerously-skip-permissions
+ll
+cd gaandmein
+ll
+git clone git@gitlab.idine.com:applications/nova.git nigodi
+cd nigodi
+vial
+exec zsh
+curl http://localhost:4000/health
+cum
+cp ~/w/nova/.wtp.yml .
+gs
+cd ..
+gt install . --git
+gs
+rm -rf nigodi
+gt rig add nigodi git@gitlab.idine.com:applications/nova.git
+ll
+cd nigodi
+ll
+cd refinery
+ll
+cd rig
+ll
+...
+...
+gt crew add choduchaman --rig nigodi
+cd gaandmein
+gt crew add choduchaman --rig nigodi
+ll
+cd .claude
+ll
+cd commands
+ll
+cd ..
+cd ..
+ll
+cd settings
+ll
+cd ..
+cd nigodi
+ll
+cd settings
+ll
+vi config.json
+cd ..
+gt mayor attach
+cd ..
+gt mayor attach
+cd ~/p/gaandmein
+ll
+cd settings
+ll
+cd ..
+gt account list
+gt account add chodu
+CLAUDE_CONFIG_DIR=/Users/mayurf/.claude-accounts/chodu claude
+gt account list
+gt mayor attach
+tmux attach -t ni-furiosa
+gt agents menu
+gt agents menu -a
+tmux -L gaandmein-e3215f attach -t ni-furiosa
+gt dashboard
+pnpm bff-dev
+cd ..
+ll
+cd specswarm
+ll
+cd nova
+ll
+gpra
+gs
+cd qa
+ll
+cd perf-tests
+ll
+git pull origin main
+ll
+..
+..
+cyolo
+grmp
+cd qa/perf-tests
+pnpm install
+ll
+cat package.json
+pnpm perf:run
+ll
+cd envs
+ll
+..
+ll
+...
+pnpm install

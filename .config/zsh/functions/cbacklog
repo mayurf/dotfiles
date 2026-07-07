@@ -1,0 +1,4 @@
+# Add an item to the current project's backlog in Claude memory and speckit
+# Usage: ccbacklog "some backlog item"
+# Run from within any project directory
+claude --model haiku --dangerously-skip-permissions -p "/backlog $*"

@@ -1,0 +1,12 @@
+local dir="${1:-.}"
+
+# Check if directory exists and is a git repo
+if [ -d "$dir" ] && git -C "$dir" rev-parse --show-toplevel > /dev/null 2>&1; then
+  echo "$1 is a directory and the root of a git repository"
+else
+  echo "$1 is not a git repo root directory"
+  return 1;
+fi
+
+# git merge main from remote/main and rebase current onto main and force push to remote
+git fetch origin main:main && git rebase refs/remotes/origin/main --autostash && git push origin HEAD --no-verify --force-with-lease

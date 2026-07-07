@@ -8,5 +8,5 @@ export ZPLUGIN_HOME="$ZDOTDIR/plugins"
 # Ensure path arrays do not contain duplicates.
 typeset -gU path fpath
 
-export PATH="$PATH:/usr/local/bin"
+path+=(/usr/local/bin)
 

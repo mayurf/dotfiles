@@ -1,0 +1,4 @@
+# Add an idea to the current project's Claude memory and speckit backlog
+# Usage: ccidea "some idea text"
+# Run from within any project directory
+cyolo -p "/idea $*"

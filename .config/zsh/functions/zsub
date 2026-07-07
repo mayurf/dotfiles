@@ -1,0 +1,9 @@
+# 1. Get the repo name from the URL (e.g., 'ez-compinit')
+local name="${${1##*/}%.git}"
+
+# 2. Define the path relative to $HOME (required for yadm)
+local rel_dest="${ZPLUGIN_HOME#$HOME/}/$name"
+
+# 3. Add and Fetch
+yadm submodule add "$1" "$rel_dest"
+yadm submodule update --init --recursive "$rel_dest"

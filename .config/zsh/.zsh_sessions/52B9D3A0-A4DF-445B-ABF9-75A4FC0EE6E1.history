@@ -1,0 +1,1299 @@
+cyolo
+pnpm tidy
+pnpm test
+pnpm install
+pnpm test
+cyolo
+git fetch
+grm
+cyolo -c
+zsh
+wtpcd
+wtp cd
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+pnpm compile && docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+pnpm compile
+docker build -t nova-combined-server -f apps/server/Dockerfile .
+docker run --rm \\
+    -p 4000:4000 \\
+    --env-file apps/server-nestjs/.env \\
+    nova-combined-server
+cyolo
+pnpm compile
+pnpm install
+pnpm compile
+docker build -t nova-combined-server -f apps/server/Dockerfile .
+cyolo
+s
+gs
+claude
+gs
+ll
+gs
+git switch -c refactor/remove-previous-bff-implementation
+wtp add refactor/remove-previous-bff-implementation
+git checkout refactor/add-new-bff-server
+wtp add refactor/remove-previous-bff-implementation
+wtp cd refactor/remove-previous-bff-implementation
+cyolo
+wtp @
+wtp cd
+wtp ls
+wtp remove --with-branch --force-branch -f removal-branch
+wtp ls
+wtp cd 004-bff-idempotency-key-implementation
+wtp cd 005-bff-correlation-id-implementation
+cyolo
+git log
+idea .
+pnpm install
+zsh
+wtp cd 004-bff-idempotency-key-implementation
+cyolo
+wtp cd
+cat /tmp/mayur_notes/pr-description.md|pb
+z nova
+pwd
+z w
+ll
+mkdir zzarchive
+mv big-rewrite zzarchive
+ll
+cd zzarchive
+ll
+cd ..
+ll
+rip mock-configurator/
+cd payments
+ll
+cd ..
+rip payment
+ll
+rip payments
+ll
+mkdir specswarm
+cd specswarm
+git clone git@gitlab.idine.com:applications/nova.git
+cd nova
+cyolo
+cyolo
+ll
+cd qa
+ll
+cd perf-tests
+ll
+cd lib
+ll
+cd ..
+ll
+cd docs
+ll
+zed .
+bew install k6
+brew install k6
+pwd
+pnpm install
+cd ..
+node runner.js
+cp envs/.env.local.example envs/.env.local
+node runner.js
+ll
+cd envs
+ll
+cat .env.local
+cd ..
+ll
+cd scripts
+ll
+cd ..
+subl runner.js
+node runner.js
+subl .
+node runner.js
+http https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa
+http 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa'
+http help
+http -h
+http --help
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq '.encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq 'plainTextCardNumber .encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq '.plainTextCardNumber .encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq '.plainTextCardNumber \n.encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq -r '.plainTextCardNumber, .encryptedCardNumber_RSA_Sha1'
+http -b 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=Visa' | jq -r '.plainTextCardNumber, .encryptedCardNumber_RSA_Sha1'
+pnpm install -g @augmentcode/auggie
+z $ZDOTDIR
+auggie
+exec zsh
+k -n partner-sites rollout status deploy/nova-server-idin
+k -n partner-sites get pods
+k -n partner-sites  rollout restart deployment nova-server-idin
+k -n partner-sites rollout status deploy/nova-server-idin
+k -n partner-sites get deployments
+k -n partner-sites rollout undo deployment/nova-server-idin
+k -n partner-sites rollout undo deployment/nova-web-idin
+export BFF_IMAGE_TAG="8cd15481"
+export WEB_IMAGE_TAG="8cd15481"
+export BFF_IMAGE_TAG="8cd15481"
+export OVERLAY=deploy/overlays/idin/dev
+kubectl kustomize "$OVERLAY" 
+kubectl apply -k "$OVERLAY"
+k -n partner-sites rollout status deploy/nova-server-idin
+k -n partner-sites get pods
+k -n partner-sites rollout undo deployment/nova-server-idin
+k -n partner-sites rollout undo deployment/nova-web-idin
+k -n partner-sites get pods
+k -n partner-sites get pods
+k -n partner-sites get pods
+k -n partner-sites rollout undo deployment/nova-server-idin
+k -n partner-sites get pods
+kubectl apply -k "$OVERLAY"
+k -n partner-sites get pods
+k -n partner-sites get pods
+k -n partner-sites  rollout restart deployment nova-server-idin
+cyolo
+zsh
+cd apps/server-nestjs
+cat .env
+pwd
+/Users/mayurf/w/specswarm/nova/apps/server-nestjs
+just -l
+just hydrate-env="stg"
+just hydrate-bff-env="stg"
+cat ../../justfile
+just hydrate-bff-env
+cat .env
+export VAULT_ADDR=https://vault.svc.idine.com
+cat .env
+pnpm run dev
+cat .env
+cd apps/server
+cat .env
+/Users/mayurf/w/specswarm/nova/apps/server
+cat .env
+ll
+cat .env
+export VAULT_ADDR=https://vault.svc.idine.com
+just hydrate-bff-env
+cat .env
+just hydrate-bff-env
+cat .env
+pnpm run dev
+gpra
+claude
+claude help
+claude -h
+cyolo -r
+ll
+cd ..
+ll
+git clone https://gitlab.idine.com/applications/offer-assignment
+git clone git@gitlab.idine.com:applications/offer-assignment.git
+cd nova
+gpra
+wtp ls
+wtp cd 005-bff-correlation-id-implementation
+git rebase refs/remotes/origin/main --autostash
+z w
+cd offer-assignment
+agy .
+bunx --bun @scalar/cli reference target/offer-assignment.yaml --watch\
+
+bunx --bun @scalar/cli target/offer-assignment.yaml --watch\
+
+cd $ZDOTDIR
+cd functions
+ll
+alias
+vial
+exec zsh
+cd w
+cd .zsh
+cat aliases
+cd ..
+cat .mise/config.toml
+cd nova
+gs
+git checkout main
+ll
+gs
+rm -rf apps/server/coverage/
+rm -rf apps/server/coverage
+vial
+pnpm install
+pnpm lint:fix
+turbo run lint
+pnpm lint:check
+pnpm tidy
+pnpm test
+pnpm test:e2e
+pnpm test:e2e --filter apps/server
+pnpm --filter "@apps/server" run test:e2e
+pnpm --filter "apps/server" run test:e2e
+pnpm --filter "./apps/server" run test:e2e
+git fetch origin main:main && git rebase refs/remotes/origin/main --autostash && git push origin HEAD --no-verify --force-with-lease
+pnpm tidy
+gs
+pnpm toidy && pnpm test && pnpm --filter "./apps/server" run test:e2e
+pnpm tidy && pnpm test && pnpm --filter "./apps/server" run test:e2e
+pnpm install
+cd apps/server
+ll
+cat .env
+vi .env.example
+cp .env.example .env.local
+nest g library psbe-proxy
+pnpm install
+pnpm i -d @fastify/http-proxy
+pnpm i -d fastify-plugin
+pnpm i -d @fastify/fastify
+pnpm i -d fastify
+claude --dangerously-skip-permissions
+claude --sessions
+claude --help
+cd apps/server
+npm run dev
+ll
+cat .env
+npm run dev
+pnpm i -d ioredis
+z nova
+gs
+rm -rf apps/server/coverage
+gs
+rm -rf .superpowers/
+rm -rf  curl-pod/
+gpra
+git checkout -b deploy/nginx_configurations_for_auth
+ll
+mkdir local-dev
+cd local-dev
+touch .env.local
+touch docker-compose.yml
+cd ,,.
+cd ..
+cd _nginx
+ll
+cat overridden_docker_entrypoint.sh
+vi .
+subl .
+cd ..
+subl .
+ll
+cd apps/server
+ll
+cd libs
+ll
+cp -R bff-auth ~/w/bff-auth-overengineered-backup
+cp -R bff-graphql-auth ~/w/bff-graphql-auth-overengineered-backup
+subl ~/w/bff-auth-overengineered-backup
+subl ~/w/bff-graphql-auth-overengineered-backup
+..
+pnpm build
+pnpm compile
+npx tsc
+gs
+z w
+ll
+cat .mise/config.toml
+vi .zsh/aliases
+cd .mise
+cd ../.zsh
+ll
+vi envrc
+exec zsh
+echo $VAULT_ADDR
+ops k8s login --cluster dev
+vi aliases
+vi aliases
+exec zsh
+pnpm tidy
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+just stop-local-bff-proxy
+./scripts/startOrUpdateLocalBff.sh
+ll ./script/
+ll ./scripts/
+./scripts/stopLocalBff.sh
+z nova
+cd apps/server
+ll
+pnpm tsc --noEmit
+pnpm install
+cyolo
+...
+git checkout -b devex/local-dev-proxy
+cyolo
+pnpm tidy
+cd _nginx/local-dev
+ll
+ll
+z nov
+chmod +x scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+scripts/startOrUpdateLocalBff.sh
+just run-local-bff-proxy
+pnpm install
+pnpm tidy
+pnpm test
+pnpm test
+pnpm test
+pnpm test
+pnpm test:e2e --filter apps/server
+pnpm test:e2e --filter apps/server
+pnpm --filter @repo/server test:e2e 
+pnpm --filter @repo/server test:e2e 
+pnpm test
+pnpm tidy
+pnpm tidy
+pnpm test
+pnpm compile
+pnpm build
+just run-local-bff-proxy
+just run-local-bff-proxy
+just run-local-bff-proxy
+cd apps/server
+pnpm run dev
+pnpm run dev
+pnpm run dev
+...
+pnpm tiday
+pnpm tidy
+cd apps/nosh-universal
+ll
+cat .env
+export EXPO_PUBLIC_BFF_ENDPOINT=http://localhost:8081/api
+pnpm run dev
+vi grmp
+ll $ZDOTDIR/functions
+grmp
+cat $ZDOTDIR/functions/grmp
+exec zsh
+...
+grmp
+wtp add -b feat/cche-module
+cyolo
+wtp add -b observability/add-prometheus-metric-instrumentation
+curl --location 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=dev&cardType=Visa' 2>/dev/null | jq 'to_entries | .[] | "\(.key): \(.value)"'
+curl --location 'https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=dev&cardType=Visa' 2>/dev/null | jq '.'
+z nova
+git checkout main
+gs
+gpra
+pnpm install
+pnpm run dev
+lsof -iTCP -sTCP:LISTEN -Pn
+ps kill 94959
+cyolo -p "kill the process listening at 4000 and 3001"
+pnpm run dev
+pnpm run dev
+export EXPO_PUBLIC_BFF_ENDPOINT=http://localhost:8081/api
+pnpm run dev
+pnpm run dev
+pnpm install
+gs
+ll
+cd apps
+ll
+cd local-dev-proxy
+ll
+cat .env.local
+pnpm install\ 
+pnpm install
+docker compose -f local-elk/docker-compose.local.yml up -d
+cd ..
+docker compose -f local-elk/docker-compose.local.yml up -d
+curl -s http://localhost:5601/api/status | fx
+ll
+fd applica*
+vi merchant-indexer-service/src/main/resources/application.conf
+cp local-elk/.env.local.example .env
+ll
+cat .env
+mv .env .env_my
+vault kv get -mount="kv" -format=json "kubernetes/mdv-stg/consumer/merchant-search-service" \\
+    | jq -r '.data.data | to_entries[] | "\(.key)=\(.value)"' \\
+    > .env_search
+cat .env_search
+vault kv get -mount="kv" -format=json "kubernetes/mdv-stg/consumer/merchant-indexer-service" \\
+    | jq -r '.data.data | to_entries[] | "\(.key)=\(.value)"' \\
+    > .env_indexer
+claude -p "I have started the indexer service. How do I initiate the indexing. othing seems to be happening. It says ready to service requests"
+curl -s -u admin:R3wards1 \\
+  'http://localhost:9005/admin/reindex?indexName=merchant'
+curl -s -u foo:foo \\
+  'http://localhost:9005/admin/reindex?indexName=merchant'
+curl -s http://localhost:9004/health 
+curl -s http://localhost:9004/health 
+curl -s http://localhost:9200/health 
+curl -s -u foo:foo \\
+  'http://localhost:9004/v2/merchants/suggest?q=pizza' | jq .
+bunx serve search-test-app
+bunx serve -p 3000 search-test-app/
+pnpx serve search-test-app
+pnpx serve search-test-app
+docker compose -f local-elk/docker-compose.local.yml up -d
+delta .env_indexer .env_search
+mv .env_indexer .env
+ll
+cd specs
+ll
+cd 001-merchant-search-suggestions
+ll
+cd checklists
+ll
+cat requirements
+cat requirements.md
+..
+ll
+cd quickstart.md
+cat quickstart.md
+vi .env
+...
+vi .env
+sbt "indexerService/run"
+sbt "searchService/run"
+sbt "searchService/run"
+sbt "searchService/run"
+sbt "searchService/run"
+knova get deployment
+knova  rollout restart deployment nova-server-idin
+knova  rollout restart deployment nova-web-idin
+knova get pod
+knova rollout undo deployment/nova-server-idin
+cd ../nova
+git checkout -b debug-deploy-16-apr
+cyolo
+cmux welcome
+z merch
+cd w
+cd merchant-search-services
+ll
+gpra
+ll
+cd local-elk
+ll
+ll
+glow QUICKSTART.md
+cat QUICKSTART.md
+ll
+fd
+cd ..
+fd
+fd | grep.conf
+fd | grep .conf
+zed .
+curl -s http://localhost:9200/merchants/_mapping \\
+  | jq '.[] .mappings.properties.suggest'
+curl -s 'http://localhost:9200/merchants/_search?size=1' \\
+  -H 'Content-Type: application/json' \\
+  -d '{"_source": ["name", "suggest"]}' \\
+  | jq '.hits.hits[0]._source'
+bunx serve search-test-app
+cyolo -c
+cyolo
+pwd
+...
+gpra
+cyolo
+ll
+vi apps/nosh-universal/.env
+npm install
+pnpm install
+npm run dev
+pnpm run dev
+pnpm run dev
+pnpm run dev
+http 'https://offerassignment.service.dev.idine.com/v1/offer-assignments?memberId=0'
+http 'https://offerassignment.service.stg.idine.com/v1/offer-assignments?memberId=0'
+http `http://localhost:8081/api/idin/csrf'\
+\
+
+http 'http://localhost:8081/api/idin/csrf'
+cyolo
+brew install --cask calyx
+pnpm install
+pnpm tidy
+pnpm lint:check
+grmp
+pnpm tidy
+pnpm test
+...
+pnpm tidy
+wtp add
+wtp add 006-bff-correlation-id
+git checkout main
+wtp add 006-bff-correlation-id
+cyolo
+idea .
+vial
+cd $ZDOTDIR
+ll
+cd functions
+ll
+cat gpra
+cat gpra > grm
+vi grm
+cat grm > grmp
+vi grmp
+..
+z w
+mkdocs serve --livereload
+mise exec -- mkdocs serve --livereload
+brew tap yuuichieguchi/calyx
+curl -s -u admin:R3wards1 \\
+  'http://localhost:9005/admin/reindex?indexName=merchant'
+curl -s -u foo:foo \\
+  'http://localhost:9005/admin/reindex?indexName=merchant'
+idea .
+xh POST localhost:9200/merchants/_search \\
+  size:=2 \\
+  query:='{"nested":{"path":"campaigns","query":{"term":{"campaigns.code":"IDT0"}}}}'\
+
+xh POST localhost:9200/merchants/_search \\
+  size:=2 \\
+  query:='{"nested":{"path":"campaigns","query":{"term":{"campaigns.code":"IDT0"}}}}'\
+| jless
+xh POST localhost:9200/merchants/_search \\
+  size:=2 \\
+  query:='{"nested":{"path":"campaigns","query":{"term":{"campaigns.code":"IDT0"}}}}'| jless
+sbt test
+sbt test
+sbt "indexerService/run"
+z search
+grmp
+idea .
+agy .
+auggie
+pnpm dev
+cat apps/server/src/psbe-proxy-plugin.ts
+auggie -r
+auggie --resume
+auggie -c
+pwd
+wtp cd
+pwd
+pnpx serve search-test-app
+brewup
+sync-brain
+z p
+~
+sync-brain
+lsof -iTCP -sTCP:LISTEN -Pn\ 
+lsof -iTCP -sTCP:LISTEN -Pn
+ops vault login --vault-cluster standard && ops k8s login --cluster dev --role=admin
+knova get pods
+z nova
+gpra
+gpra
+wtp add -b fix/auth-cookie-fix-to-unblock-local-dev
+auggie
+pnpm install
+cd apps/server
+pnpm install
+cat .env
+just hydrate-bff-env
+vi .env
+pnpm dev
+auggie
+pnpm run dev
+auggie -c
+cat .env
+wtp cd
+wtp remove --with-branch fix/auth-cookie-fix-to-unblock-local-dev
+wtp remove --with-branch -f fix/auth-cookie-fix-to-unblock-local-dev
+wtp add -b fix/auth-cookie-fix-to-unblock-local-dev
+wtp add fix/auth-cookie-fix-to-unblock-local-dev
+wtp cd fix/auth-cookie-fix-to-unblock-local-dev
+ll
+gs
+wetp cd
+wtp cd
+wtp remove --with-branch --force-branch -f fix/auth-cookie-fix-to-unblock-local-dev
+..
+cat merchant-search-services/aidocs/merchant-search-suggestions-code-review-scope-report.md|pb
+pnpm tidy
+pnpm test
+cd apps/server
+pnpm dev
+just hydrate-bff-env
+cat .env
+pnpm dev
+auggie -r
+pnpm install
+cd apps/server
+pnpm run dev
+pnpm run dev
+pnpm check-types
+...
+pnpm dev
+cyolo
+wtp add -b fix/auth-cookie-fix-to-unblock-local-dev
+idea .
+wtp ls
+wtp remove --with-branch --force-branch -f fix/auth-cookie-fix-to-unblock-local-dev
+pnpm tidy
+pnpm test
+pnpm install
+fd -I -t d '^node_modules$' -x rip {}
+pnpm install
+pnpm install
+pnpm tidy
+pnpm compile
+pnpm dev
+pnpm dev
+cyolo
+pnpm install
+pnpm copmpile
+pnpm compile
+cd apps/server
+npm bff-dev
+pnpm bff-dev
+cd ..
+..
+pnpm dev
+cyolo -p "Create a PR description for the changes here with instructions to frontend devs who work on @apps/nosh-universal on any changes they need to make to their local dev setup. Write the description to a PR.md"
+pnpm dev
+cyolo
+pnpm tidy
+pnpm test
+pnpm run dev
+cd .claude
+ll
+..
+git worktree remove -f /Users/mayurf/w/nova/.worktrees/exciting-tereshkova
+git worktree list
+git worktree prune
+git worktree list
+wtp remove --with-branch --force-branch -f fix/auth-cookie-fix-to-unblock-local-dev\
+
+gs
+vial
+exec zsh
+ll
+vi .env
+cat .env
+sbt "searchService/run"
+sbt "searchService/run"
+grmp
+cp ~/Downloads/CODE_REVIEW_REPORT.md .
+auggie
+l
+ll
+ga
+gs
+lg
+git switch -c search-suggestions-dev-tools-used-for-local-testing-and-specs
+lg
+lg
+git checkout NOP-000-merchant-search-suggestions-for-nova
+gpra
+grmp
+cd ~/p
+ll
+cd 15minstuff
+ll
+cd ..
+rm -rf 15minstuff
+cd my-containers
+ll
+cd ..
+rm -rf my-containers
+ll
+cd tools
+l
+ll
+cd play
+ll
+cat README.md
+cd ..
+ll
+cd ..
+ll
+rm -rf tools
+rm misetools.txt
+ll
+cd c
+ll
+cd agent-brain
+l;l
+ll
+cd ..
+cd ..
+ll
+cd c
+ll
+cd ..
+rm -rf c
+ll
+cd auth-apike
+ll
+cd ..
+rm -rf auth-apike
+ll
+cd ai
+ll
+cd ..
+rm -rf ai
+rm brew*
+ll
+mkdir gaandmein
+cd gaandmein
+touch bff-ways-of-working.excalidraw
+agy .
+cd ..
+mkdir .claude
+CLAUDE_CONFIG_DIR="/home/mayurf/p/.claude" claude --dangerously-skip-permissions
+pwd
+CLAUDE_CONFIG_DIR="/Users/mayurf/p/.claude" claude --dangerously-skip-permissions
+ll
+cd gaandmein
+ll
+git clone git@gitlab.idine.com:applications/nova.git nigodi
+cd nigodi
+vial
+exec zsh
+curl http://localhost:4000/health
+cum
+cp ~/w/nova/.wtp.yml .
+gs
+cd ..
+gt install . --git
+gs
+rm -rf nigodi
+gt rig add nigodi git@gitlab.idine.com:applications/nova.git
+ll
+cd nigodi
+ll
+cd refinery
+ll
+cd rig
+ll
+...
+...
+gt crew add choduchaman --rig nigodi
+cd gaandmein
+gt crew add choduchaman --rig nigodi
+ll
+cd .claude
+ll
+cd commands
+ll
+cd ..
+cd ..
+ll
+cd settings
+ll
+cd ..
+cd nigodi
+ll
+cd settings
+ll
+vi config.json
+cd ..
+gt mayor attach
+cd ..
+gt mayor attach
+cd ~/p/gaandmein
+ll
+cd settings
+ll
+cd ..
+gt account list
+gt account add chodu
+CLAUDE_CONFIG_DIR=/Users/mayurf/.claude-accounts/chodu claude
+gt account list
+gt mayor attach
+tmux attach -t ni-furiosa
+gt agents menu
+gt agents menu -a
+tmux -L gaandmein-e3215f attach -t ni-furiosa
+gt dashboard
+pnpm bff-dev
+cd ..
+ll
+cd specswarm
+ll
+cd nova
+ll
+gpra
+gs
+cd qa
+ll
+cd perf-tests
+ll
+git pull origin main
+ll
+..
+..
+cyolo
+grmp
+cd qa/perf-tests
+pnpm install
+ll
+cat package.json
+pnpm perf:run
+ll
+cd envs
+ll
+..
+ll
+...
+pnpm install
+cd apps/server/smoke
+pnpm install
+pnpm smoke:report
+pnpm tidy
+....
+pwd
+cd ../..
+cd ..
+pnpm install
+pnpm tidy
+wtp add -b test/test-user-data-creation
+cyolo
+wtp add -b test/smoke-tests-bff main
+wtp add test/smoke-tests-bff
+idea .
+just hydrate-bff-env dev
+ops vault login --vault-cluster standard && ops k8s login --cluster dev --role=admin
+knova get pods
+knova get pods
+ops vault login --vault-cluster standard && ops k8s login --cluster dev --role=admin
+kubectl -n partner-sites get pods
+kubectl -n partner-sites get deployment
+aws ls s3
+auggie
+knova get deployment
+knova get pods
+wtp ls
+cd ..
+ll
+rm -rf product
+rm bff-developer-essentials.mfd
+rm -rf merchant-search-testapp
+cd specswarm
+ll
+cd nova
+grmp
+gs
+cd qa
+ll
+..
+cyolo
+claude --dangerously-skip-permissions
+wtp cd
+cd ..
+ll
+rm -rf nova
+z /Users/mayurf/p/gaandmein/nigodi/polecats/furiosa/nigodi/
+ll
+gs
+git log
+gt peek nigodi/furiosa
+pwd
+z gaa
+gt peek nigodi/furiosa
+  curl -i -X OPTIONS 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+    -u 'devuser:password1' \\
+    -H 'Origin: https://example.com' \\
+    -H 'Access-Control-Request-Method: POST'
+  curl -i -X OPTIONS 'https://nova-server-idin.service.dev.idine.com' \\
+    -u 'devuser:password1' \\
+    -H 'Origin: https://example.com' \\
+    -H 'Access-Control-Request-Method: POST'
+knova  rollout restart deployment nova-server-idin
+knova get pods
+knova get pods
+knova get pods
+knova get pods
+knova get pods
+knova get pods
+knova get pods
+  curl -i -X OPTIONS 'https://nova-server-idin.service.dev.idine.com' \\
+    -u 'devuser:password1' \\
+    -H 'Origin: https://example.com' \\
+    -H 'Access-Control-Request-Method: POST'
+  curl -i -X OPTIONS 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+    -u 'devuser:password1' \\
+    -H 'Origin: https://example.com' \\
+    -H 'Access-Control-Request-Method: POST'
+  curl -i -X OPTIONS 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+    -u 'devuser:password1' \\
+    -H 'Origin: http://localhost:8081' \\
+    -H 'Access-Control-Request-Method: POST'
+cd apps/server
+pnpm tidy
+pnpm install
+grmp
+pnpm dev
+pnpm bff-dev
+glab mr delete 315
+git push origin --delete test/smoke-tests-bff
+git push origin --delete test/smoke-tests-bff --no-verify
+gt mayor terminate
+gt mayor stop
+gt mayor help
+gt mayor restart
+gt mayor attach
+echo $(wtp cd)
+wtp l
+wtp ls
+git switch main
+gs
+ll
+cd ..
+ll
+wtp cd
+z nova
+gpra
+ops vault login --vault-cluster standard && ops k8s login --cluster dev --role=admin
+knova get pods
+cyolo
+cd .claude
+ll
+cd skilla
+cd skills
+ll
+rm just
+rm postm
+rm postman
+rm postman-api-readiness
+...
+pnpx skills add Postman-Devrel/agent-skills
+ll
+lg
+pnpx skills add just
+pnpx skills add casey/just
+wtp add -b deploy/bff-health-endpoint
+wtp cd
+wtp remove --with-branch --force-branch -f deploy/bff-health-endpoint
+ll
+vi .wtp.yml
+wtp add -b deploy/bff-health-endpoint
+cyolo
+idea .
+cd apps/server
+pnpm bff-dev
+cat .env
+just hydrate-bff-env dev
+cat .env
+cat package.json
+cat .env.local
+pnpm bff-dev
+wtp cd
+claude --dangerously-skip-permissions
+knova 
+knova get pods
+ops vault login --vault-cluster standard && ops k8s login --cluster dev --role=admin
+knova get pods
+curl -sS -u devuser:password1 \\
+  -H 'content-type: application/json' \\
+  -X POST 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+  --data-binary @- <<'JSON'\
+{\
+  "query": "query ValidateEmail($email: String!) { validateEmail(email: $email) { isValid isAvailable errorCode message } }",\
+  "variables": { "email": "not-an-email" }\
+}\
+JSON
+curl -sS -u devuser:password1 \\
+  -H 'content-type: application/json' \\
+  -X POST 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+  --data-binary @- <<'JSON'\
+{\
+  "query": "query ValidateEmail($email: String!) { validateEmail(email: $email) { isValid isAvailable errorCode message } }",\
+  "variables": { "email": "nova-test-001-20260427-220650@mailinator.com" }\
+}\
+JSON
+curl -sS -u devuser:password1 \\
+  -H 'content-type: application/json' \\
+  -X POST 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+  --data-binary @- <<'JSON'\
+{\
+  "query": "query ValidateEmail($email: String!) { validateEmail(email: $email) { isValid isAvailable errorCode message } }",\
+  "variables": { "email": "nova-test-20260427-221227@mailinator.com" }\
+}\
+JSON
+curl -sS -u devuser:password1 \\
+  -H 'content-type: application/json' \\
+  -X POST 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+  --data-binary @- <<'JSON'\
+{\
+  "query": "query ValidateEmail($email: String!) { validateEmail(email: $email) { isValid isAvailable errorCode message } }",\
+  "variables": { "email": "mayur@suitings.com" }\
+}\
+JSON
+ops vault login --vault-cluster standard && ops k8s login --cluster dev --role=admin
+knova  rollout restart deployment nova-server-idin
+knova get deployment
+knova get deployment
+knova rollout status
+knova rollout status deploy/nova-server-idin
+knova get pods
+curl -sS -u devuser:password1 \\
+  -H 'content-type: application/json' \\
+  -X POST 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+  --data-binary @- <<'JSON'\
+{\
+  "query": "query ValidateEmail($email: String!) { validateEmail(email: $email) { isValid isAvailable errorCode message } }",\
+  "variables": { "email": "mayur@suitings.com" }\
+}\
+JSON
+curl -sS -u devuser:password1 \\
+  -H 'content-type: application/json' \\
+  -X POST 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+  --data-binary @- <<'JSON'\
+{\
+  "query": "query ValidateEmail($email: String!) { validateEmail(email: $email) { isValid isAvailable errorCode message } }",\
+  "variables": { "email": "nova-test-20260427-221227@mailinator.com" }\
+}\
+JSON
+curl -sS -u devuser:password1 \\
+  -H 'content-type: application/json' \\
+  -X POST 'https://nova-server-idin.service.dev.idine.com/graphql' \\
+  --data-binary @- <<'JSON'\
+{\
+  "query": "query ValidateEmail($email: String!) { validateEmail(email: $email) { isValid isAvailable errorCode message } }",\
+  "variables": { "email": "nova-test-20260427-221227@mailinator.com" }\
+}\
+JSON | fx\
+
+cum
+exec zsh
+git switch main
+wtp ls
+wtp cd #bash\
+# Create a fresh PSBE staging member and save credentials to\
+# mynotes/_users/<email-local-part>.json so the user is reusable.\
+#\
+# Usage:\
+#   ./create-user.sh                                  # auto-generate everything\
+#   ./create-user.sh --email foo@bar.com              # use a specific email\
+#   ./create-user.sh --card-type Mastercard           # Visa | Mastercard | Amex | Discover\
+#   ./create-user.sh --first-name Pat --last-name T.\
+#   ./create-user.sh --notes "for NOP-XXX duplicate-email test"\
+#   ./create-user.sh --password Custom123             # default: Testing123\
+#\
+# Requires: curl, jq, awk, bash 4+.\
+\
+set -euo pipefail\
+\
+# --- Defaults ---\
+EMAIL=""\
+CARD_TYPE="Visa"\
+FIRST_NAME="Pat"\
+LAST_NAME="Tester"\
+NOTES=""\
+PASSWORD="Testing123"\
+ZIP="60606"\
+ADDRESS1="540 W. Madison St."\
+ADDRESS2="Suite 2400"\
+CITY="Chicago"\
+STATE="IL"\
+\
+# --- Args ---\
+while [[ $# -gt 0 ]]; do\
+  case "$1" in\
+    --email)      EMAIL="$2"; shift 2 ;;\
+    --card-type)  CARD_TYPE="$2"; shift 2 ;;\
+    --first-name) FIRST_NAME="$2"; shift 2 ;;\
+    --last-name)  LAST_NAME="$2"; shift 2 ;;\
+    --notes)      NOTES="$2"; shift 2 ;;\
+    --password)   PASSWORD="$2"; shift 2 ;;\
+    -h|--help)\
+      awk 'NR==1{next} /^#/{sub(/^# ?/, ""); print; next} {exit}' "$0"\
+      exit 0\
+      ;;\
+    *) echo "Unknown arg: $1" >&2; exit 2 ;;\
+  esac\
+done\
+\
+# --- Resolve paths ---\
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"\
+\
+if [[ -z "$EMAIL" ]]; then\
+  EMAIL="nova-test-$(date +%Y%m%d-%H%M%S)@mailinator.com"\
+fi\
+\
+LOCAL_PART="${EMAIL%%@*}"\
+USER_FILE="$SCRIPT_DIR/${LOCAL_PART}.json"\
+\
+if [[ -e "$USER_FILE" ]]; then\
+  echo "Refusing to overwrite $USER_FILE â€ƒ´ delete it first if you want to re-create." >&2\
+  exit 1\
+fi\
+\
+PSBE="https://partner-sites-back-end-nosh.mdv-stg.idine.com"\
+VELCRO_URL="https://velcro-wallet.mdv-stg.idine.com/encrypted?environment=stg&cardType=${CARD_TYPE}"\
+\
+# PSBE expects uppercase card type; normalize.\
+case "$(echo "$CARD_TYPE" | tr '[:lower:]' '[:upper:]')" in\
+  VISA)       CARD_TYPE_PSBE="VISA" ;;\
+  MASTERCARD) CARD_TYPE_PSBE="MASTERCARD" ;;\
+  AMEX)       CARD_TYPE_PSBE="AMEX" ;;\
+  DISCOVER)   CARD_TYPE_PSBE="DISCOVER" ;;\
+  *)\
+    echo "Unsupported --card-type '$CARD_TYPE' (use Visa, Mastercard, Amex, Discover)" >&2\
+    exit 2 ;;\
+esac\
+\
+# --- Step 1: velcro ---\
+echo ">>> Fetching encrypted card from velcro ($CARD_TYPE)..." >&2\
+VELCRO=$(curl -fsSL "$VELCRO_URL")\
+ENC_CARD=$(echo "$VELCRO" | jq -r '.encryptedCardNumber_RSA_Sha1 // empty')\
+PAN=$(echo "$VELCRO" | jq -r '.plainTextCardNumber // empty')\
+if [[ -z "$ENC_CARD" || -z "$PAN" ]]; then\
+  echo "velcro returned an unexpected shape:" >&2\
+  echo "$VELCRO" | jq . >&2 2>/dev/null || echo "$VELCRO" >&2\
+  exit 1\
+fi\
+LAST4="${PAN: -4}"\
+\
+# --- Step 2: CSRF preflight ---\
+# PSBE issues XSRF-TOKEN with Domain=neighborhoodnoshrewards.rnstg.com (not the API\
+# host), so curl's -c jar drops it. We awk it out of the raw Set-Cookie header.\
+echo ">>> CSRF preflight ($PSBE/)..." >&2\
+CSRF=$(curl -sSI "$PSBE/" 2>/dev/null | awk '\
+  tolower($1) == "set-cookie:" {\
+    n = split($0, parts, /[ \t;]+/)\
+    for (i = 1; i <= n; i++) {\
+      if (parts[i] ~ /^XSRF-TOKEN=/) {\
+        sub(/^XSRF-TOKEN=/, "", parts[i])\
+        print parts[i]\
+        exit\
+      }\
+    }\
+  }')\
+if [[ -z "$CSRF" ]]; then\
+  echo "No XSRF-TOKEN in Set-Cookie from $PSBE/" >&2\
+  exit 1\
+fi\
+\
+# --- Step 3: enroll ---\
+PPN=$(printf '%010d' $((RANDOM * RANDOM)))\
+PHONE="312555$(printf '%04d' $((RANDOM % 10000)))"\
+\
+BODY=$(jq -nc \\
+  --arg fn "$FIRST_NAME" --arg ln "$LAST_NAME" --arg zip "$ZIP" \\
+  --arg ppn "$PPN" --arg email "$EMAIL" --arg pw "$PASSWORD" \\
+  --arg ct "$CARD_TYPE_PSBE" --arg last4 "$LAST4" --arg enc "$ENC_CARD" \\
+  --arg a1 "$ADDRESS1" --arg a2 "$ADDRESS2" --arg city "$CITY" --arg state "$STATE" \\
+  --arg phone "$PHONE" '{\
+    firstName: $fn, lastName: $ln, zipCode: $zip,\
+    partnerProgramNumber: $ppn, email: $email, password: $pw,\
+    emailOptIn: true, acceptTOS: true, directFileFeedOptIn: true,\
+    creditCards: [{ cardType: $ct, lastFour: $last4, encryptedCardNumber: $enc }],\
+    address1: $a1, address2: $a2, city: $city, state: $state,\
+    phoneNumber: $phone, smsOptIn: true,\
+    referral: {\
+      utmSource: "local-test", utmMedium: "local-test", utmCampaign: "local-test",\
+      utmTerm: "local-test", utmContent: "local-test", referrer: "local-test", source: "local-test"\
+    },\
+    "g-recaptcha-response": "stg-bypass"\
+  }')\
+\
+echo ">>> Enrolling $EMAIL..." >&2\
+RESP_FILE=$(mktemp)\
+trap 'rm -f "$RESP_FILE"' EXIT\
+HTTP_CODE=$(curl -sS -o "$RESP_FILE" -w '%{http_code}' \\
+  -X POST "$PSBE/api/Enrollment" \\
+  -H "Content-Type: application/json" \\
+  -H "Cookie: XSRF-TOKEN=$CSRF" \\
+  -H "X-Xsrf-Token: $CSRF" \\
+  --data-binary "$BODY")\
+\
+if [[ "$HTTP_CODE" != "200" ]]; then\
+  echo "Enrollment failed: HTTP $HTTP_CODE" >&2\
+  jq . < "$RESP_FILE" 2>/dev/null || cat "$RESP_FILE" >&2\
+  echo >&2\
+  exit 1\
+fi\
+\
+PUBLIC_ID=$(jq -r '.member.publicId // .publicId // empty' < "$RESP_FILE")\
+WEB_ID_RAW=$(jq -r '.member.webId // .webId // empty' < "$RESP_FILE")\
+CAMPAIGN=$(jq -r '.member.campaignCode // .campaignCode // empty' < "$RESP_FILE")\
+\
+if [[ "$WEB_ID_RAW" =~ ^[0-9]+$ ]]; then\
+  WEB_ID_JSON="$WEB_ID_RAW"\
+else\
+  WEB_ID_JSON="null"\
+fi\
+\
+# --- Step 4: write the user file ---\
+jq -n \\
+  --arg email "$EMAIL" --arg pw "$PASSWORD" \\
+  --arg fn "$FIRST_NAME" --arg ln "$LAST_NAME" \\
+  --arg ppn "$PPN" --arg public_id "$PUBLIC_ID" --argjson web_id "$WEB_ID_JSON" \\
+  --arg a1 "$ADDRESS1" --arg a2 "$ADDRESS2" --arg city "$CITY" --arg state "$STATE" --arg zip "$ZIP" \\
+  --arg phone "$PHONE" \\
+  --arg ct "$CARD_TYPE_PSBE" --arg last4 "$LAST4" \\
+  --arg campaign "$CAMPAIGN" --arg notes "$NOTES" \\
+  --arg date "$(date +%Y-%m-%d)" '{\
+    email: $email,\
+    password: $pw,\
+    firstName: $fn,\
+    lastName: $ln,\
+    partnerProgramNumber: $ppn,\
+    publicId: $public_id,\
+    webId: $web_id,\
+    address: {\
+      address1: $a1, address2: $a2, city: $city, state: $state, zipCode: $zip\
+    },\
+    phoneNumber: $phone,\
+    creditCard: {\
+      cardType: $ct,\
+      lastFour: $last4,\
+      note: "Encrypted via velcro RSA_Sha1; not retained. Get a fresh encrypted card from velcro before reusing this user for card-add/charge flows."\
+    },\
+    campaignCode: $campaign,\
+    partnerCode: "IDIN",\
+    enrolledAt: $date,\
+    notes: $notes\
+  }' > "$USER_FILE"\
+\
+echo ">>> Saved $USER_FILE" >&2\
+echo\
+jq . < "$USER_FILE"\
+
+wtp ls
+wtp cd test/test-user-data-creation
+git switch test/test-user-data-creation
+wtp cd
+wtp remove --with-branch --force-branch -f test/test-user-data-creation
+git switch main
+cd mynotes/NOP-727
+./verify-curl.sh
+cum
+cyolo
+cd ../merchant-search-services/
+pwd
+auggie
+brewup
+cd apps/server
+pnpm install
+pnpm run test:e2e
+grmp
+pnpm tidy
+pnpm test
+wtp add -b feat/NOP-573-prospect-capture
+idea .
+traceroute https://nova-server-idin.service.dev.idine.com
+traceroute https://nova-web-idin.service.dev.idine.com/api
+traceroute https://nova-web-idin.service.dev.idine.com

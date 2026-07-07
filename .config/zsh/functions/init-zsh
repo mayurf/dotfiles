@@ -1,0 +1,49 @@
+# init-zsh
+#
+# Initialize a .zsh directory scaffold in the current (or given) directory.
+# Creates: .zsh/aliases, .zsh/envrc, .zsh/functions/
+#
+# Usage: init-zsh [target_dir]
+
+init-zsh() {
+  local target="${1:-.}"
+
+  if [[ ! -d "$target" ]]; then
+    echo "init-zsh: directory not found: $target" >&2
+    return 1
+  fi
+
+  local zsh_dir="$target/.zsh"
+
+  if [[ -d "$zsh_dir" ]]; then
+    echo "init-zsh: .zsh already exists at $zsh_dir" >&2
+    return 1
+  fi
+
+  mkdir -p "$zsh_dir/functions"
+
+  # Seed aliases with a header comment
+  cat > "$zsh_dir/aliases" <<'EOF'
+# Project-local aliases
+# Sourced automatically by load-project-zsh
+
+EOF
+
+  # Seed envrc with a header comment
+  cat > "$zsh_dir/envrc" <<'EOF'
+# Project-local environment variables
+# Sourced automatically by load-project-zsh
+
+EOF
+
+  # Add a .gitignore-friendly notice inside functions/
+  cat > "$zsh_dir/functions/.keep" <<'EOF'
+# Place one autoloadable zsh function per file in this directory.
+# Each file name becomes the function name.
+EOF
+
+  echo "init-zsh: created $zsh_dir"
+  echo "  $zsh_dir/aliases"
+  echo "  $zsh_dir/envrc"
+  echo "  $zsh_dir/functions/"
+}
