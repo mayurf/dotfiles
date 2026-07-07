@@ -1,0 +1,54 @@
+# load-project-zsh
+#
+# Recursively scan a root directory (default: ~/w) for .zsh directories and
+# source their aliases, envrc, and functions.
+#
+# Usage: load-project-zsh [root_dir]
+
+load-project-zsh() {
+  local root="${1:-$HOME/w}"
+
+  if [[ ! -d "$root" ]]; then
+    echo "load-project-zsh: directory not found: $root" >&2
+    return 1
+  fi
+
+  # Find all .zsh directories under root (including root itself)
+  local zsh_dirs=()
+  while IFS= read -r -d '' dir; do
+    zsh_dirs+=("$dir")
+  done < <(find "$root" -maxdepth 2 -type d -name ".zsh" -print0 2>/dev/null)
+
+  # Also check the root itself
+  [[ -d "$root/.zsh" ]] || true  # already caught by find
+
+  local loaded=0
+  for zsh_dir in "${zsh_dirs[@]}"; do
+    # Source envrc if present
+    if [[ -f "$zsh_dir/envrc" ]]; then
+      source "$zsh_dir/envrc"
+      (( loaded++ ))
+    fi
+
+    # Source aliases if present
+    if [[ -f "$zsh_dir/aliases" ]]; then
+      source "$zsh_dir/aliases"
+      (( loaded++ ))
+    fi
+
+    # Add functions dir to fpath and autoload everything in it
+    if [[ -d "$zsh_dir/functions" ]]; then
+      fpath=("$zsh_dir/functions" $fpath)
+      # Autoload all files in the functions directory
+      local fn
+      for fn in "$zsh_dir/functions"/*(N.); do
+        autoload -Uz "${fn:t}"
+      done
+      (( loaded++ ))
+    fi
+  done
+
+  if (( ${#zsh_dirs[@]} == 0 )); then
+    echo "load-project-zsh: no .zsh directories found under $root"
+  fi
+}

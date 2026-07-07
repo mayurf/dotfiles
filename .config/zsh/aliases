@@ -24,8 +24,6 @@ alias ...="../.."
 alias ....="../../.."
 alias .....="../../../.."
 
-alias rm="nocorrect grm -i"
-
 ## Git
 alias gc="git commit"
 alias ga="git add"
@@ -49,7 +47,6 @@ alias grt="./gradlew test"
 alias k="kubectl"
 alias gcheck="./gradlew check"
 
-alias idea="open -na \"IntelliJ IDEA.app\" --args \"$@\""
 alias lg="lazygit"
 alias lzd='lazydocker'
 alias pod='podman'
@@ -63,7 +60,8 @@ alias pull-brain="gpra $BRAIN_LOC"
 alias sync-brain="pull-brain && push-brain"
 
 alias openb="open \$(cat $HOME/bookmarks.txt| fzf | cut -d'|' -f2)"
-alias claude-yolo="claude -c --model sonnet --dangerously-skip-permissions"
+alias cyolo="claude --model sonnet --dangerously-skip-permissions"
+alias cum="CLAUDE_CONFIG_DIR=\"/Users/mayurf/p/.claude\" claude --dangerously-skip-permissions"
 
-alias rbcurl='kubectl exec -it pod/curl -- curl '
-
+alias npx="bunx --bun"
+alias postman="bunx --bun postman-cli"

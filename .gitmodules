@@ -13,3 +13,9 @@
 [submodule ".config/zsh/plugins/zsh-smartcache"]
 	path = .config/zsh/plugins/zsh-smartcache
 	url = https://github.com/QuarticCat/zsh-smartcache.git
+[submodule ".config/zsh/plugins/ez-compinit"]
+	path = .config/zsh/plugins/ez-compinit
+	url = https://github.com/mattmc3/ez-compinit
+[submodule ".config/zsh/.config/zsh/plugins/fzf-tab"]
+	path = .config/zsh/.config/zsh/plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab

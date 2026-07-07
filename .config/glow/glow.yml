@@ -9,5 +9,5 @@ width: 80
 # show all files, including hidden and ignored.
 all: true
 # show line numbers (TUI-mode only)
-showLineNumbers: false
+showLineNumbers: true
 tui: true
