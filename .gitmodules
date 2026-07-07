@@ -21,7 +21,7 @@
 	url = git@github.com:mayurf/lazyvim.git
 [submodule ".config/zsh/plugins/ez-compinit"]
 	path = .config/zsh/plugins/ez-compinit
-	url = https://github.com/mattmc3/ez-compinit
+	url = git@github.com:mattmc3/ez-compinit.git
 [submodule ".config/zsh/.config/zsh/plugins/fzf-tab"]
 	path = .config/zsh/.config/zsh/plugins/fzf-tab
 	url = https://github.com/Aloxaf/fzf-tab
