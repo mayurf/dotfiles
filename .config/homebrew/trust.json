@@ -1,0 +1,6 @@
+{
+  "trustedformulae": [
+    "hashicorp/tap/vault",
+    "xwmx/taps/pb"
+  ]
+}
