@@ -1,14 +1,5 @@
 zmodload zsh/zprof
 
-export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-# Enable Powerlevel10k instant prompt. Must be at the very top.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-# typeset -g POWERLEVEL9K_INSTANT_PROMPT=verbose
-
 setopt autocd
 export KEYTIMEOUT=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
@@ -53,7 +44,10 @@ source $ZDOTDIR/wtp_init.zsh
 
 # pnpm
 export PNPM_HOME="/Users/mayurf/.local/share/pnpm"
-path=($PNPM_HOME $path)
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
 # pnpm end
 
 #zprof

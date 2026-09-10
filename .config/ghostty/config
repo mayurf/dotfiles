@@ -1,2 +1,3 @@
+theme = dark:GitHub-Dark-Personal,light:GitHub Light Default
 keybind = shift+enter=text:\n
 keybind = ctrl+enter=text:\n

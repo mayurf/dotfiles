@@ -1,0 +1,26 @@
+brew install --cask notion
+cd $ZDOTDIR
+ll
+cd .config
+ll
+cat zsh
+cd zsh
+ll
+cd plugins
+ll
+cd ..
+cd ..
+cd ..
+;
+ll
+cd plugin
+ll
+..
+cd plugins
+ll
+cd ..
+ll
+...
+ll
+update-shell-tools
+brew install proto

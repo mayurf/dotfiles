@@ -37,7 +37,7 @@ alias gpo="git push origin"
 alias gco="git checkout"
 alias gcm="git commit -m"
 alias gcb="git checkout -b"
-alias gl="git logline"
+alias gl="git log --graph --oneline --decorate"
 
 ## Gradle
 alias grb="./gradlew clean build testAll sonar -PsonarAnalysisMode=publish"
